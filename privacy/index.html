@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lemon Basket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F97316;
+      --bg: #FFFBF0;
+      --text: #1C1917;
+      --muted: #78716C;
+      --border: #E7E5E4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo-icon { font-size: 26px; }
+
+    .content {
+      max-width: 720px;
+      margin: 48px auto 80px;
+      padding: 0 24px;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .content h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 36px 0 12px;
+    }
+
+    .content p {
+      font-size: 15px;
+      color: #44403C;
+      margin-bottom: 16px;
+    }
+
+    .content ul {
+      margin: 0 0 16px 20px;
+    }
+
+    .content ul li {
+      font-size: 15px;
+      color: #44403C;
+      margin-bottom: 8px;
+    }
+
+    .content a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .content a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1.5px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="/">
+      <span class="logo-icon">🍋</span>
+      Lemon Basket
+    </a>
+  </nav>
+
+  <div class="content">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: May 15, 2026</p>
+
+    <p>Lemon Basket ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the Lemon Basket mobile application (the "App").</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>We collect the following types of information:</p>
+    <ul>
+      <li><strong>Account information:</strong> When you create an account, we collect your email address and a display name you choose.</li>
+      <li><strong>Recipe data:</strong> Recipes you save, including ingredients, instructions, photos, and notes you add.</li>
+      <li><strong>Usage data:</strong> Information about how you use the App, including features accessed and AI extraction activity, used to improve reliability and performance.</li>
+      <li><strong>Device information:</strong> Basic device identifiers used for crash reporting and diagnostics.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To provide and operate the App and its features</li>
+      <li>To process AI-powered recipe extraction from URLs and screenshots</li>
+      <li>To sync your recipes across devices when you are signed in</li>
+      <li>To monitor app stability and fix errors (via Sentry crash reporting)</li>
+      <li>To improve our AI extraction models and feature quality</li>
+      <li>To communicate with you about your account or changes to the App</li>
+    </ul>
+
+    <h2>3. AI Processing</h2>
+    <p>When you import a recipe using a URL or screenshot, the content is sent to Google's Gemini API for extraction. Screenshots and URLs you submit are processed transiently and are not stored by Google for training purposes under our usage terms. We do not store raw screenshot images on our servers beyond the duration needed to complete extraction.</p>
+
+    <h2>4. Data Storage</h2>
+    <p>Your account and recipe data are stored securely using Supabase, which is hosted on AWS infrastructure in the United States. Data is encrypted at rest and in transit.</p>
+
+    <h2>5. Data Sharing</h2>
+    <p>We do not sell your personal information. We share data only with the third-party service providers necessary to operate the App:</p>
+    <ul>
+      <li><strong>Supabase</strong> — database and authentication</li>
+      <li><strong>Google Gemini API</strong> — AI recipe extraction</li>
+      <li><strong>Sentry</strong> — crash reporting and diagnostics</li>
+      <li><strong>RevenueCat</strong> — subscription and payment management</li>
+      <li><strong>Cloudflare</strong> — network infrastructure and proxy</li>
+      <li><strong>Expo / EAS</strong> — app build and update delivery</li>
+    </ul>
+    <p>Each provider is bound by their own privacy policies and applicable data protection laws.</p>
+
+    <h2>6. Subscriptions and Payments</h2>
+    <p>Subscription purchases are handled entirely by Apple (App Store) or Google (Play Store) and processed through RevenueCat. We do not collect or store your payment card information.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>We retain your account and recipe data for as long as your account is active. You may delete your account at any time from the Settings screen in the App, which will permanently delete all associated data within 30 days.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us and we will delete it promptly.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>Depending on your location, you may have the right to access, correct, or delete the personal information we hold about you. To exercise these rights, contact us at the email address below. We will respond within 30 days.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting a notice in the App or by email. Your continued use of the App after changes take effect constitutes your acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or your data, please contact us at:<br />
+    <a href="mailto:caleb1walker4@gmail.com">caleb1walker4@gmail.com</a></p>
+  </div>
+
+  <footer>
+    <p><a href="/">Lemon Basket</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>

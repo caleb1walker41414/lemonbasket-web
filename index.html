@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lemon Basket — AI Recipe Tracker</title>
+  <meta name="description" content="Save any recipe in seconds. Snap a screenshot, paste a URL, or import from Instagram and TikTok. Lemon Basket organizes your recipes, tracks macros, and builds your grocery list automatically." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F97316;
+      --orange-dark: #EA6C0A;
+      --yellow: #FDE68A;
+      --bg: #FFFBF0;
+      --text: #1C1917;
+      --muted: #78716C;
+      --border: #E7E5E4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 26px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 64px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--yellow);
+      color: #92400E;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .hero h1 span { color: var(--orange); }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    .cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      transition: border-color 0.15s, transform 0.1s;
+    }
+
+    .btn-secondary:hover { border-color: #A8A29E; transform: translateY(-1px); }
+
+    .store-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* FEATURES */
+    .features {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1.5px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="/">
+      <span class="logo-icon">🍋</span>
+      Lemon Basket
+    </a>
+    <ul class="nav-links">
+      <li><a href="/privacy">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-badge">AI-Powered Recipe Tracking</span>
+    <h1>Save any recipe.<br /><span>Cook it tonight.</span></h1>
+    <p>Snap a screenshot, paste a URL, or import from Instagram and TikTok. Lemon Basket turns any recipe into a clean, organized card — with macros and a grocery list built in.</p>
+    <div class="cta-group">
+      <a class="btn-primary" href="#" id="ios-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store
+      </a>
+      <a class="btn-secondary" href="#" id="android-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341 14.86 10.8l2.868-4.967a.502.502 0 0 0-.182-.685.502.502 0 0 0-.685.182l-2.907 5.035-1.954-3.383V3.5a.5.5 0 0 0-1 0v3.482L9.046 10.35 6.139 5.33a.5.5 0 1 0-.867.5l2.868 4.967L5.477 15.34A3.493 3.493 0 0 0 4 18c0 1.93 1.57 3.5 3.5 3.5.99 0 1.88-.414 2.516-1.076L12 17.695l1.984 2.729A3.484 3.484 0 0 0 16.5 21.5c1.93 0 3.5-1.57 3.5-3.5a3.493 3.493 0 0 0-1.477-2.659z"/></svg>
+        Google Play
+      </a>
+    </div>
+    <p class="store-note">Coming soon to iOS and Android</p>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">📸</div>
+      <h3>Import from anywhere</h3>
+      <p>Screenshot a TikTok, Instagram post, or any recipe website. Our AI reads it and pulls out every ingredient and step — even from paywalled sites.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Macros, automatically</h3>
+      <p>Every recipe gets an estimated calorie and macro breakdown. No manual logging. No separate nutrition app. Just cook and know what you're eating.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛒</div>
+      <h3>Grocery list built in</h3>
+      <p>Add recipes to your meal plan and Lemon Basket builds your grocery list automatically — organized by aisle, with duplicates merged.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <p>&copy; 2026 Lemon Basket. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
